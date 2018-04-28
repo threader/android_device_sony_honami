@@ -57,3 +57,13 @@
     <item name="cpu.awake">16.02</item>
     <item name="battery.capacity">3000</item>
 </device>
+        <value>156.07</value>
+        <value>160.39</value>
+        <value>162.6815</value>
+        <value>165.87</value>
+        <value>171.9116</value>
+        <value>179.34</value>
+    </array>
+    <item name="cpu.awake">16.02</item>
+    <item name="battery.capacity">3000</item>
+</device>
