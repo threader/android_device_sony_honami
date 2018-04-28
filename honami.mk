@@ -15,7 +15,7 @@
 # Inherit the fusion-common definitions
 $(call inherit-product, device/sony/rhine-common/rhine.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/sony/honami/overlay
+#DEVICE_PACKAGE_OVERLAYS += device/sony/honami/overlay
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
@@ -37,7 +37,7 @@ PRODUCT_COPY_FILES += \
 
 # Audio
 PRODUCT_COPY_FILES += \
-   $(LOCAL_PATH)/audio/mixer_paths.xml:system/etc/mixer_paths.xml
+   $(LOCAL_PATH)/audio/mixer_paths.xml:system/vendor/etc/mixer_paths.xml
 
 # Sensors
 PRODUCT_COPY_FILES += \
@@ -47,6 +47,14 @@ PRODUCT_COPY_FILES += \
 PRODUCT_COPY_FILES += \
    $(LOCAL_PATH)/configs/thermanager.xml:system/etc/thermanager.xml
 
+TARGET_SYSTEM_PROP += device/sony/honami/system.prop
+
+# call dalvik heap config
+$(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-dalvik-heap.mk)
+$(call inherit-product, frameworks/native/build/phone-xxhdpi-2048-hwui-memory.mk)
+
+# Include non-opensource parts
+$(call inherit-product, vendor/sony/honami/honami-vendor.mk)
 TARGET_SYSTEM_PROP += device/sony/honami/system.prop
 
 # call dalvik heap config
