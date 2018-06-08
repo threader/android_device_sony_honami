@@ -15,7 +15,7 @@
 # Inherit the fusion-common definitions
 $(call inherit-product, device/sony/rhine-common/rhine.mk)
 
-DEVICE_PACKAGE_OVERLAYS += device/sony/honami/overlay
+#DEVICE_PACKAGE_OVERLAYS += device/sony/honami/overlay
 
 # These are the hardware-specific features
 PRODUCT_COPY_FILES += \
